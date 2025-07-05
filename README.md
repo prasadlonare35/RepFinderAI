@@ -23,7 +23,7 @@ GEMINI_API_KEY=your_api_key_here
 
 3. Run the app:
 ```bash
-python -m uvicorn main:app --reload
+python main.py
 ```
 
 Visit `http://127.0.0.1:8000` and start searching!
