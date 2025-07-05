@@ -1,10 +1,8 @@
 # Indian Public Representatives Directory
 A web application that provides information about public representatives (MPs, MLAs) across Indian cities using Gemini AI and allows data verification.
 
-
-https://repfinderai-2.onrender.com   ( you can acc
 ## 🌐 Live Demo
-You can access the demo version here:
+You can access the demo version here: https://repfinderai-2.onrender.com
 🔗 Indian Public Representatives Directory
 
 ### ⚠ Note:
