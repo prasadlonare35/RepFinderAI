@@ -30,18 +30,11 @@ Visit `http://127.0.0.1:8000` and start searching!
 
 ## Tech Stack Analysis
 
-### Current Implementation
-
-#### Backend
-- **FastAPI (Python)**: Modern, fast web framework for building APIs
-- **SQLite with SQLAlchemy (Async)**: Lightweight database with ORM support
-- **Google Gemini AI**: AI-powered data generation
-- **Jinja2**: Template engine for HTML rendering
-
-#### Frontend
-- **Enhanced HTML/CSS/JavaScript**: Modern, responsive, and visually appealing static frontend
-- **Material-style UI**: Improved cards, buttons, and layout using advanced CSS
-- **AJAX**: For asynchronous operations
+- **Backend**: FastAPI (Python)
+- **Database**: SQLite with SQLAlchemy (Async)
+- **Frontend**: HTML, CSS, JavaScript
+- **AI**: Google Gemini AI
+- **Template Engine**: Jinja2
 
 ### 📸 Screenshots
 
