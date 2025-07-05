@@ -46,7 +46,7 @@ Visit `http://127.0.0.1:8000` and start searching!
 ### 📸 Screenshots
 
 |------------------|------------------|
-| ![](screenshots/Img01.jpeg) | ![](screenshots/Img02.jpeg) |
+| ![](screenshots/Img01.png) | ![](screenshots/Img02.png) |
 |------------------|------------------|
 ---
 
