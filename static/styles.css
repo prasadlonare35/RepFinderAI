@@ -1,10 +1,15 @@
 :root {
-    --primary-color: #4a90e2;
+    --primary-color: #1976d2;
+    --primary-dark: #115293;
     --secondary-color: #2c3e50;
-    --success-color: #27ae60;
-    --error-color: #e74c3c;
-    --background-color: #f5f6fa;
+    --success-color: #43a047;
+    --error-color: #e53935;
+    --background-color: #f5f7fb;
+    --card-bg: #fff;
     --text-color: #2c3e50;
+    --shadow: 0 4px 16px rgba(25, 118, 210, 0.08), 0 1.5px 3px rgba(44, 62, 80, 0.04);
+    --border-radius: 14px;
+    --transition: 0.2s cubic-bezier(.4,0,.2,1);
 }
 
 * {
@@ -27,10 +32,37 @@ body {
 }
 
 .header {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 0;
-    margin-bottom: 2rem;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    padding: 1.5rem 0 1rem 0;
+    margin-bottom: 2.5rem;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.header-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    vertical-align: middle;
+}
+
+.footer {
+    background: var(--card-bg);
+    color: #888;
+    text-align: center;
+    padding: 1.2rem 0 1.4rem 0;
+    margin-top: 3rem;
+    box-shadow: 0 -2px 8px rgba(25, 118, 210, 0.04);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    font-size: 1rem;
 }
 
 .header h1 {
@@ -39,11 +71,65 @@ body {
 }
 
 .search-container {
-    background: white;
-    padding: 2rem;
+    background: var(--card-bg);
+    padding: 2rem 2.5rem 1.2rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 1rem auto;
+    background: #f0f4fa;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+    box-shadow: 0 1px 3px rgba(25, 118, 210, 0.04);
+}
+
+.search-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
+    opacity: 0.7;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.08rem;
+    background: transparent;
+    color: var(--text-color);
+    outline: none;
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+    transition: background var(--transition), box-shadow var(--transition);
+}
+
+.primary-btn:hover, .primary-btn:focus {
+    background: var(--primary-dark);
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.13);
 }
 
 .search-box {
@@ -77,16 +163,80 @@ button:hover {
 
 .representatives-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .representative-card {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem 1.8rem 1.2rem 1.8rem;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    min-height: 210px;
+}
+
+.representative-card:hover {
+    transform: translateY(-6px) scale(1.025);
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.16);
+}
+
+.representative-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.representative-card p {
+    margin-bottom: 0.35rem;
+    color: var(--secondary-color);
+    font-size: 1.07rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border-radius: 12px;
+    font-size: 0.98rem;
+    font-weight: 500;
+    margin-top: 0.6rem;
+    margin-bottom: 0.7rem;
+}
+
+.badge-verified {
+    background: var(--success-color);
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(67, 160, 71, 0.18);
+}
+
+.badge-unverified {
+    background: var(--error-color);
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(229, 57, 53, 0.13);
+}
+
+.edit-btn {
+    background: transparent;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 0.7rem;
+    transition: background var(--transition), color var(--transition);
+}
+
+.edit-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
 }
 
 .representative-card:hover {
@@ -148,16 +298,44 @@ button:hover {
 }
 
 .loading {
-    text-align: center;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: var(--primary-dark);
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.loading-icon {
+    font-size: 2.6rem;
+    margin-bottom: 0.3rem;
+    color: var(--primary-color);
+}
+
+.spin {
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .error-message {
-    background-color: var(--error-color);
-    color: white;
-    padding: 1rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+    background: var(--error-color);
+    color: #fff;
+    padding: 0.8rem 1.3rem;
+    border-radius: 8px;
+    font-size: 1.07rem;
+    margin: 1.2rem auto 0.5rem auto;
+    max-width: 520px;
+    box-shadow: 0 2px 8px rgba(229, 57, 53, 0.08);
+    display: none;
+}
+
+.error-message[style*="display: block"] {
+    display: block;
 }
 
 .success-message {

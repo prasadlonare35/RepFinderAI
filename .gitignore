@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+.env.*
+
+# Database
+*.db
+*.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Logs
+*.log
+
+# Misc
+*.bak
+*.swp
+.idea/
+
+# Output
+*.out
+*.tmp
+
+# Test
+.coverage
+htmlcov/
+
+# Ignore frontend build if created
+frontend/build/

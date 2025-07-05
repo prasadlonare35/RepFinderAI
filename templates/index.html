@@ -5,35 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indian Public Representatives Directory</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container header-flex">
+            <span class="material-icons header-icon">account_balance</span>
             <h1>Indian Public Representatives Directory</h1>
         </div>
     </header>
 
     <main class="container">
-        <div class="search-container">
+        <section class="search-container">
             <form id="searchForm">
                 <div class="search-box">
-                    <input type="text" id="cityInput" placeholder="Enter city name (e.g., Nashik, Mumbai)" required>
-                    <button type="submit">Search</button>
+                    <span class="material-icons search-icon">search</span>
+                    <input type="text" id="cityInput" placeholder="Enter city name (e.g., Nashik, Mumbai)" required autocomplete="off">
+                    <button type="submit" class="primary-btn">
+                        <span class="material-icons">search</span> Search
+                    </button>
                 </div>
             </form>
-        </div>
+        </section>
 
         <div id="error" class="error-message" style="display: none;"></div>
         
         <div id="loading" class="loading" style="display: none;">
+            <span class="material-icons loading-icon spin">autorenew</span>
             <p>Fetching representatives...</p>
         </div>
 
-        <div id="resultsContainer" class="representatives-container">
+        <section id="resultsContainer" class="representatives-container">
             <!-- Results will be populated here -->
-        </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Indian Public Representatives Directory</p>
+        </div>
+    </footer>
 
     <script src="/static/script.js"></script>
 </body>

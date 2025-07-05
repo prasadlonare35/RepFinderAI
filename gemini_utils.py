@@ -29,7 +29,7 @@ async def get_representatives_info(city: str) -> List[dict]:
     Get information about public representatives for a given city using Gemini AI.
     """
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-2.0-flash')
         
         prompt = f"""
         Provide a list of current public representatives (like MPs, MLAs, Municipal Corporation members) 
