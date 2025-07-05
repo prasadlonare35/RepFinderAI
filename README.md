@@ -3,7 +3,6 @@ A web application that provides information about public representatives (MPs, M
 
 ## 🌐 Live Demo
 You can access the demo version here: https://repfinderai-2.onrender.com
-🔗 Indian Public Representatives Directory
 
 ### ⚠ Note:
 As this project is hosted for free on Render (a third-party hosting platform), it might take a few seconds to wake up initially (cold start) and may sometimes not display all data instantly.
