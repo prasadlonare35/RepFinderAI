@@ -1,6 +1,12 @@
 # Indian Public Representatives Directory
-
 A web application that provides information about public representatives (MPs, MLAs) across Indian cities using Gemini AI and allows data verification.
+
+## 🌐 Live Demo
+You can access the demo version here: https://repfinderai-2.onrender.com
+
+### ⚠ Note:
+As this project is hosted for free on Render (a third-party hosting platform), it might take a few seconds to wake up initially (cold start) and may sometimes not display all data instantly.
+This is normal behavior on free hosting tiers.
 
 ## Features
 
@@ -23,31 +29,23 @@ GEMINI_API_KEY=your_api_key_here
 
 3. Run the app:
 ```bash
-python -m uvicorn main:app --reload
+python main.py
 ```
 
 Visit `http://127.0.0.1:8000` and start searching!
 
 ## Tech Stack Analysis
 
-### Current Implementation
-
-#### Backend
-- **FastAPI (Python)**: Modern, fast web framework for building APIs
-- **SQLite with SQLAlchemy (Async)**: Lightweight database with ORM support
-- **Google Gemini AI**: AI-powered data generation
-- **Jinja2**: Template engine for HTML rendering
-
-#### Frontend
-- **Enhanced HTML/CSS/JavaScript**: Modern, responsive, and visually appealing static frontend
-- **Material-style UI**: Improved cards, buttons, and layout using advanced CSS
-- **AJAX**: For asynchronous operations
+- **Backend**: FastAPI (Python)
+- **Database**: SQLite with SQLAlchemy (Async)
+- **Frontend**: HTML, CSS, JavaScript
+- **AI**: Google Gemini AI
+- **Template Engine**: Jinja2
 
 ### 📸 Screenshots
 
-screenshots/img01.jpeg
-screenshots/img02.jpeg
-
+| ![](screenshots/Img01.png) | ![](screenshots/Img02.png) |
+|------------------------------|-------------------------|
 ---
 
 ### Strengths
