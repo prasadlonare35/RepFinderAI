@@ -2,7 +2,7 @@
 A web application that provides information about public representatives (MPs, MLAs) across Indian cities using Gemini AI and allows data verification.
 
 ## 🌐 Live Demo
-You can access the demo version here: https://repfinderai-2.onrender.com
+You can access the demo version here: [https://repfinderai-1.onrender.com](https://repfinderai-1.onrender.com)
 
 ### ⚠ Note:
 As this project is hosted for free on Render (a third-party hosting platform), it might take a few seconds to wake up initially (cold start) and may sometimes not display all data instantly.
